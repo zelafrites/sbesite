@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmity - Products</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../..//css/style.css" type="text/css">
+    <script src="../..//scripts/script.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html"><img src="stuff/logo.png" alt="Farmity Logo" class="logo"></a>
+            <a href="index.html"><img src="../..//res/images/logo.png" alt="Farmity Logo" class="logo"></a>
             <div>
                 <input type="text" placeholder="Search...">
                 <button>🔍</button>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            ☰
+            </button>
+            <nav>
+                <ul class="site-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
     </header>
 
     <div id="prodcont">
         <div class="prodcard">
-            <img src="stuff/Verity.png" alt="Product Image"><br>
+            <img src="../../res/images/Verity.png" alt="Product Image"><br>
             <h4>Verity</h4>
             <p>Ask him anything</p>
             <h5>Price: £1.20</h5>
@@ -40,7 +44,7 @@
             </form>
         </div>
         <div class="prodcard">
-            <img src="stuff/Falsity.png" alt="Product Image">
+            <img src="../../res/images/Falsity.png" alt="Product Image">
             <h4>Falsity</h4>
             <p>Don't ask him anything</p>
             <h5>Price: £1.20</h5>
@@ -55,7 +59,7 @@
             </form>
         </div>
         <div class="prodcard">
-            <img src="stuff/Cruelty.png" alt="Product Image">
+            <img src="../../res/images/Cruelty.png" alt="Product Image">
             <h4>Cruelty</h4>
             <p>Just don't even talk to him</p>
             <h5>Price: £120</h5>
