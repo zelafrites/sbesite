@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmity - Products</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="stuff/logo.png" alt="Farmity Logo" class="logo"></a>
+            <div>
+                <input type="text" placeholder="Search...">
+                <button>🔍</button>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="prodcont">
+        <div class="prodcard">
+            <img src="stuff/Verity.png" alt="Product Image"><br>
+            <h4>Verity</h4>
+            <p>Ask him anything</p>
+            <h5>Price: £1.20</h5>
+            <form action="basket.php">
+                <input type="hidden"
+                name="itemname"
+                value="Item name">
+                <input type="hidden"
+                name="price"
+                value="1.20">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="prodcard">
+            <img src="stuff/Falsity.png" alt="Product Image">
+            <h4>Falsity</h4>
+            <p>Don't ask him anything</p>
+            <h5>Price: £1.20</h5>
+            <form action="basket.php">
+                <input type="hidden"
+                name="itemname"
+                value="Item name">
+                <input type="hidden"
+                name="price"
+                value="1.20">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+        <div class="prodcard">
+            <img src="stuff/Cruelty.png" alt="Product Image">
+            <h4>Cruelty</h4>
+            <p>Just don't even talk to him</p>
+            <h5>Price: £120</h5>
+            <form action="basket.php">
+                <input type="hidden"
+                name="itemname"
+                value="Item name">
+                <input type="hidden"
+                name="price"
+                value="120.00">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

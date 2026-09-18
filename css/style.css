@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#prodcont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prodcard {
+    max-width: 350px;
+    padding: 10px;
+    margin: 16px;
+    text-align: center;
+
+    outline-color: black;
+    outline-style: solid;
+    outline-width: 2px;
+
+    img {
+        max-width: 220px;
+        max-height: 220px;
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.5vw;
+
+    background-color: #ffd000;
+
+    .logo {
+        margin-top: 4px;
+        margin-left: 4px;
+
+        max-width: 150px;
+
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+
+    input {
+        width: 30vw;
+        height: 3vw;
+        border: none;
+        padding-left: 10px;
+
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+
+    button {
+        width: 3vw;
+        height: 3vw;
+        border: none;
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+
+    ul {
+        display: flex;
+        gap: 5vw;
+        padding-right: 8vw;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:visited {
+            color: black;
+        }
+    }
+}
