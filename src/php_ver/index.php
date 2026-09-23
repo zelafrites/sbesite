@@ -6,7 +6,6 @@
     <title>Farmity</title>
     <link rel="stylesheet" href="../..//css/style.css" type="text/css">
     <script src="../..//scripts/script.js" type="text/javascript" defer></script>
-    <script src="../..//scripts/fileserver.config.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
