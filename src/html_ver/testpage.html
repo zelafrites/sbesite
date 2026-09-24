@@ -6,6 +6,7 @@
     <title>Farmity</title>
     <link rel="stylesheet" href="../..//css/style.css" type="text/css">
     <script src="../..//scripts/script.js" type="text/javascript" defer></script>
+    <script src="../..//scripts/accessibility.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
@@ -29,37 +30,26 @@
             </nav>
     </header>
 
-    <form class="contact" action="mailto:contact@farmity.com" method="post">
-        <h1>Contact Us</h1>
-        <label>Email</label><br>
-        <input type="email" placeholder="Email">
-        <br>
-        <label>Phone</label><br>
-        <input type="number" placeholder="Phone">
-        <br>
-        <select>
-            <option value="general">General Enquiry</option>
-            <option value="payment">Problems with payment</option>
-            <option value="delivery">Problems with delivery</option>
-            <option value="product">Problems with product</option> 
-        </select>
-        <br>
-        <textarea placeholder="Ask me anything . . ."></textarea>
-        <br>
-        <button>Submit</button>
-    </form>
+    <section class="accessibility-box">
+        <h2>Accessibility Options</h2>
+        <button onclick="themeSwitch()" id="theme-switch-button">Toggle Theme (current: light)</button>
+        <div>
+            <h3>Font Sizes</h3>
+            <button onclick="increaseFontSize()">+</button>
+            <button onclick="resetFontSize()">RESET</button>
+            <button onclick="decreaseFontSize()">-</button>
+        </div>
+    </section>
 
     <footer>
         <a href="index.html">
             <img src="../..//res/images/Verity.png" alt="Verity Logo">
         </a>
-        <div>
-            <p>It's me. It's Verity.<br>Ask me anything.</p>
-            <ul>
-                <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="about.php">Abooutk</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="about.php">Abooutk</a></li>
+            <li><button><img src="../..//res/images/accessibility.png" alt="Accessibility"></button></li>
+        </ul>
     </footer>
 </body>
 </html>

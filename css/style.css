@@ -11,7 +11,17 @@ body {
     font-weight: bold;
 
     padding: 0;
+    padding-bottom: 50px;
     margin: 0;
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+
+    a {
+        color: inherit;
+    }
 }
 
 h1 {
@@ -216,6 +226,54 @@ header {
     }
 }
 
+.accessibility-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: fixed;
+    bottom: 15%;
+    left: 55%;
+
+    width: 50vh;
+    height: 50vh;
+
+    background-color: #ffd000;
+    color: black;
+
+    z-index: 1000;
+
+    outline-color: black;
+    outline-style: solid;
+    outline-width: 2px;
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 2.5vh;
+    }
+
+    h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 2vh;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+
+        font-size: 1vw;
+        font-weight: bold;
+    }
+}
+
 footer {
     display: flex;
     justify-content: space-around;
@@ -252,6 +310,7 @@ footer {
 
     ul {
         display: flex;
+        align-items: center;
         gap: 4vw;
         margin-right: 10px;
         list-style-type: none;
@@ -265,6 +324,17 @@ footer {
 
         &:visited {
             color: black;
+        }
+    }
+
+    button {
+        height: 3vh;
+        width: 3vh;
+        border: none;
+        background: none;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 

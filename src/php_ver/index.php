@@ -33,13 +33,11 @@
         <a href="index.html">
             <img src="../..//res/images/Verity.png" alt="Verity Logo">
         </a>
-        <div>
-            <p>It's me. It's Verity.<br>Ask me anything.</p>
-            <ul>
-                <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="about.php">Abooutk</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="about.php">Abooutk</a></li>
+            <li><button><img src="../..//res/images/accessibility.png" alt="Accessibility"></button></li>
+        </ul>
     </footer>
 </body>
 </html>
