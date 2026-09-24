@@ -11,7 +11,7 @@ enjoy
 
 ### project
 Author: me
-Version: v0.0
+Version: v0.4
 
 ### html
 index.html = homepage
