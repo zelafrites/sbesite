@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://googleapis.com');
 
 * {
     padding: 0;
@@ -6,12 +7,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ffd000;
+    --secondary-color: #1a1a1a;
+    --font-scale: 1;
+    --medium-font-size: calc(2vh * var(--font-scale));
+    --small-font-size: calc(1.5vh * var(--font-scale));
+    --xtra-small-font-size: calc(1vh * var(--font-scale));
+    --big-font-size: calc(2.5vh * var(--font-scale));
+    --xtra-big-font-size: calc(3vh * var(--font-scale));
+    --gigantic-font-size: calc(5vh * var(--font-scale));
+    --font-primary: "CanvaSans", sans-serif;
+}
+
 body {
-    font-family: "CanvaSans", sans-serif;
+    font-family: var(--font-primary);
     font-weight: bold;
 
     padding: 0;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     margin: 0;
 }
 
@@ -38,6 +52,10 @@ header {
     color: black;
 
     z-index: 1000;
+
+    div {
+        display: block;
+    }
 
     .logo {
         max-width: 150px;
@@ -73,7 +91,7 @@ header {
     a {
         text-decoration: none;
         color: black;
-        font-size: 1.5vw;
+        font-size: var(--xtra-big-font-size);
 
         &:visited {
             color: black;
@@ -120,7 +138,7 @@ header {
 
     span {
         margin-bottom: 10px;
-        font-size: 2vh;
+        font-size: var(--medium-font-size);
     }
 
     .filter {
@@ -227,7 +245,7 @@ header {
 }
 
 .accessibility-box {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -252,13 +270,13 @@ header {
 
     h2 {
         margin-bottom: 10px;
-        font-size: 2.5vh;
-    }
+        font-size: var(--xtra-big-font-size);
+    }z
 
     h3 {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 2vh;
+        font-size: var(--xtra-big-font-size);
     }
 
     button {
@@ -269,7 +287,7 @@ header {
         outline-style: solid;
         outline-width: 2px;
 
-        font-size: 1vw;
+        font-size: var(--medium-font-size);
         font-weight: bold;
     }
 }
@@ -302,7 +320,7 @@ footer {
 
         p {
             margin-bottom: 10px;
-            font-size: 2vh;
+            font-size: var(--medium-font-size);
 
             color: #5d5c5c
         }
@@ -320,7 +338,7 @@ footer {
     a {
         text-decoration: none;
         color: black;
-        font-size: 2.5vh;
+        font-size: var(--big-font-size);
 
         &:visited {
             color: black;
@@ -342,7 +360,7 @@ footer {
 
 @font-face {
     font-family: "CanvaSans";
-    src: url("../res/fonts/CanvaSans-Regular.otf") format("truetype");
+    src: url("/res/fonts/CanvaSans-Regular.otf");
 }
 
 @media (max-width: 800px) {
@@ -377,14 +395,11 @@ footer {
             outline-width: 2px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.85);
             -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.85);
-
-            a {
-                font-size: 5vh;
-            }
+            font-size: var(--gigantic-font-size);
         }
+    }
 
-        .site-nav.is-open {
-            display: flex;
-        }
+    .site-nav.is-open {
+        display: flex;
     }
 }
