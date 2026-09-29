@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
-    <link rel="stylesheet" href="../..//css/style.css" type="text/css">
 </head>
 <body>
     <?php
@@ -13,7 +12,7 @@
         $hostname = "127.0.0.1";
         $username = "pma";
         $password = "pmapass";
-        $dbname = "FamityDB";
+        $dbname = "FarmityDB";
 
         // Create connection
         $conn = mysqli_connect($hostname, $username, $password, $dbname);
