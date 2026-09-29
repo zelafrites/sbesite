@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmity</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="scripts/script.js" type="text/javascript" defer></script>
-    <script src="scripts/accessibility.js" type="text/javascript" defer></script>
-</head>
+<?php
+
+include("sec.php");
+
+// Create connection
+$conn = new mysqli($hostname, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("<script>console.log('Connection failed: " . mysqli_connect_error() . "');</script>");
+}
+echo "<script>console.log('Connected successfully');</script>";
+
+// Begin Query
+$sql = 'SELECT * FROM Navigation';
+$results = $conn->query($sql);
+
+if ($results->num_rows > 0) {
+    while($row = $results->fetch_assoc()) {
+        echo '<li><a href="'.$row["mlink"].'">'.$row["mlabel"].'</a></li>';
+    }
+}
+
+// Show the web content
+
+echo '
 <body onload="loadTheme()">
     <header>
             <a href="index.php"><img src="res/images/logo.png" alt="Farmity Logo" class="logo"></a>
@@ -57,5 +73,6 @@
             <li><button id="access_btn" onclick="initAccessibility()"><img src="res/images/accessibility.png" alt="Accessibility"></button></li>
         </ul>
     </footer>
-</body>
-</html>
+</body>';
+
+?>
