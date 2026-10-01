@@ -65,6 +65,7 @@ header {
     }
 
     .logo {
+        display: block;
         max-width: 150px;
         max-height: 150px;
     }
@@ -74,6 +75,7 @@ header {
         height: 3vh;
         border: none;
         padding-left: 10px;
+        font-size: var(--medium-font-size);
     }
 
     button {
@@ -170,13 +172,12 @@ header {
 }
 
 #prodcont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20vw, 1fr));
+    grid-gap: 20px;
 
     right: 0;
     margin-right: 10vw;
-    max-width: 55vw;
 }
 
 .prodcard {
@@ -190,8 +191,8 @@ header {
     outline-width: 2px;
 
     img {
-        max-width: 30vh;
-        max-height: 30vh;
+        max-width: 15vw;
+        max-height: 15vw;
     }
 
     button {
@@ -203,6 +204,7 @@ header {
         outline-color: black;
         outline-style: solid;
         outline-width: 2px;
+        font-size: var(--medium-font-size);
     }
 }
 
@@ -279,7 +281,7 @@ header {
     h2 {
         margin-bottom: 10px;
         font-size: var(--xtra-big-font-size);
-    }z
+    }
 
     h3 {
         margin-top: 10px;
@@ -315,6 +317,10 @@ footer {
     img {
         max-height: 8vh;
         max-width: 8vh;
+
+        .verity-logo {
+            display: block;
+        }
     }
 
     div {
