@@ -33,3 +33,5 @@ $results = $conn->query($sql);
         </div></li>
     </ul>
 </nav>
+
+<?php $conn ->close(); ?>

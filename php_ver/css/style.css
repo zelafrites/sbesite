@@ -369,6 +369,10 @@ footer {
 
 }
 
+table, tr, th, td {
+    border: black solid 2px;
+}
+
 @media (max-width: 800px) {
     header {
 
@@ -385,8 +389,8 @@ footer {
             display: none;
             width: 80vw;
             height: 50vh;
-            top: 25%;
-            right: 50%;
+            top: 200%;
+            right: 47%;
             transform: translateX(50%);
             flex-direction: column;
             justify-content: center;
@@ -407,5 +411,18 @@ footer {
 
     .site-nav.is-open {
         display: flex;
+    }
+
+    #prodcont {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(20vw, 1fr));
+        grid-gap: 20px;
+
+        right: 0;
+        margin-right: 10vw;
+    }
+
+    #filtercont {
+        display: none;
     }
 }

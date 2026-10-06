@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +27,7 @@ echo "<script>console.log('Connected successfully');</script>";
 
 // Begin Query
 $sql = 'SELECT * FROM Product';
-$productResults = $conn->query($sql);
+$pResults = $conn->query($sql);
 ?>
 
 <body>
@@ -46,38 +50,13 @@ $productResults = $conn->query($sql);
                 <select id="category" name="category">
                     <option value="all">All</option>
                     <option value="vcu">Verity Cinematic Universe</option>
+                    <option value="none">None</option>
                 </select>
             </div>
         </div>
 
         <div id="prodcont">
-            <?php
-            // Display da query
-            if ($productResults->num_rows > 0) {
-                while($row = $productResults->fetch_assoc()) {
-                    echo '
-                    
-                    <div class="prodcard">
-                        <img src="res/images/'.$row["Image"].'.png" alt="Product Image"><br>
-                        <h4>'.$row["Title"].'</h4>
-                        <p>'.$row["Description"].'</p>
-                        <h5>Stock: '.$row["Stock"].'</h5>
-                        <h5>Price: £'.$row["Price"].'</h5>
-                        <form action="basket.php">
-                            <input type="hidden"
-                            name="itemname"
-                            value="'.$row["Title"].'">
-                            <input type="hidden"
-                            name="price"
-                            value="'.$row["Price"].'">
-                            <button type="submit">Add to Cart</button>
-                        </form>
-                    </div>
-
-                    ';
-                }
-            }
-            ?>
+            <?php include("fetchprod.php"); ?>
         </div>
 
     </section>

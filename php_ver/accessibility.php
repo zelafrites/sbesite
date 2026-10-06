@@ -1,3 +1,6 @@
+<!-- For debugging, call it once, or else it will require to be clicked twice. -->
+<body onload="initAccessibility()">
+
 <section class="accessibility-box" id="access_container">
     <h2>Accessibility Options</h2>
     <button onclick="themeSwitch()" id="theme-switch-button">Toggle Theme (current: light)</button>
@@ -14,3 +17,5 @@
         </select>
     </div>
 </section>
+
+</body>
