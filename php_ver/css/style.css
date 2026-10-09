@@ -43,6 +43,58 @@ body.dark-theme {
     }
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    input {
+        width: clamp(100px, 80%, 500px);
+        height: 4vh;
+        margin: 0;
+        border-radius: 0;
+        padding-left: 10px;
+        border: none;
+
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+
+    button {
+        height: 4vh;
+        width: 10vw;
+        border-radius: 0;
+        background-color: #ffd000;
+        border: none;
+
+        outline-color: black;
+        outline-style: solid;
+        outline-width: 2px;
+
+        font-size: var(--medium-font-size);
+    }
+}
+
 h1 {
     margin-bottom: 5vh;
 }
@@ -177,7 +229,13 @@ header {
     grid-gap: 20px;
 
     right: 0;
-    margin-right: 10vw;
+    margin-right: 5vw;
+}
+
+#randprodcont {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20vw, 1fr));
+    grid-gap: 20px;
 }
 
 .prodcard {
@@ -205,6 +263,14 @@ header {
         outline-style: solid;
         outline-width: 2px;
         font-size: var(--medium-font-size);
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input {
+        height: 1.5vw;
     }
 }
 
@@ -315,8 +381,7 @@ footer {
     color: black;
 
     img {
-        max-height: 8vh;
-        max-width: 8vh;
+        width: 70px;
 
         .verity-logo {
             display: block;
@@ -409,6 +474,12 @@ table, tr, th, td {
         }
     }
 
+    footer {
+        img {
+            width: 40px;
+        }
+    }
+
     .site-nav.is-open {
         display: flex;
     }
@@ -418,8 +489,7 @@ table, tr, th, td {
         grid-template-columns: repeat(1, minmax(20vw, 1fr));
         grid-gap: 20px;
 
-        right: 0;
-        margin-right: 10vw;
+        margin: 0;
     }
 
     #filtercont {

@@ -1,37 +1,33 @@
 <?php
 session_start();
-
-// Initialize cart
-if (isset($_SESSION['cart'])) {
-    // Instantiate an empty session
-    $_SESSION['cart'] = [];
+//initalise cart
+if(!isset($_SESSION['Product'])){
+    $_SESSION['Product'] = [];
 }
-
-// Add item
-if (isset($_POST['add'])) {
+ 
+//add item
+if(isset($_POST['add'])){
     $id = (int)$_POST['ProductID'];
-
-    if (isset($_SESSION['cart'][$id])) {
-        $_SESSION['cart'][$id]['Quantity']++;
-    } else {
-        $_SESSION['cart'][$id] = [
+ 
+    if(isset($_SESSION['Product'][$id])){
+        $_SESSION['Product'][$id]['quantity']++;
+    } else{
+        $_SESSION['Product'][$id] = [
             "Title" => $_POST['Title'],
             "Price" => $_POST['Price'],
-            "Quantity" => 1
+            "Quantity" => $_POST['Quantity']
         ];
     }
 }
-
-// Remove item
-if (isset($_GET['remove'])) {
+ 
+//remove item
+if(isset($_GET['remove'])){
     $id = $_GET['remove'];
-
-    unset($_SESSION['cart'][$id]);
-    header("Location: products.php");
+ 
+    unset($_SESSION['Product'][$id]);
+    header("Location: basket.php");
     exit;
 }
-
-echo "<h1>Cart: " . json_encode($_SESSION['cart']) . "</h1>";
 
 ?>
 
@@ -40,9 +36,11 @@ echo "<h1>Cart: " . json_encode($_SESSION['cart']) . "</h1>";
 
 <style><?php include('css/style.css'); ?></style>
 
+<?php include('header.php'); ?>
+
 <h2>Your Cart</h2>
 
-<?php if (!empty($_SESSION['cart'])): ?>
+<?php if (!empty($_SESSION['Product'])): ?>
 
 <table cellpadding="10">
     <tr>
@@ -54,7 +52,7 @@ echo "<h1>Cart: " . json_encode($_SESSION['cart']) . "</h1>";
 
 <?php
 $total = 0;
-foreach ($_SESSION['cart'] as $id => $item):
+foreach ($_SESSION['Product'] as $id => $item):
     $itemTotal = $item['Price'] * $item['Quantity'];
     $total += $itemTotal;
 ?>
@@ -81,5 +79,8 @@ foreach ($_SESSION['cart'] as $id => $item):
 <?php endif; ?>
 
 <a href="products.php">Continue Shopping</a>
+
+<?php include('accessibility.php'); ?>
+<?php include('footer.php'); ?>
 </body>
 </html>

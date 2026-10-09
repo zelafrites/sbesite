@@ -32,6 +32,9 @@ if ($pResults->num_rows > 0) {
                 name="Quantity"
                 value="1">
 
+                <label for="Quantity">Quantity:</label>
+                <input type="number" id="Quantity" name="Quantity" id="Quantity" required>
+
                 <button type="submit" name="add">Add to Cart</button>
             </form>
         </div>
